@@ -1,0 +1,123 @@
+/* Basic Styles */
+body {
+    font-family: var(--font-family);
+    color: var(--font-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #1e90ff; /* DodgerBlue */
+    --secondary-color: #ff6347; /* Tomato */
+    --font-color: #222;
+    --background-color: #f5f5f5;
+    --font-family: 'Lato', sans-serif;
+    --spacing: 1rem;
+    --card-bg-color: #fff;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+    --footer-bg-color: #222;
+    --footer-text-color: #fff;
+}
+
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+section {
+    padding: var(--spacing) calc(var(--spacing) * 2);
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: var(--spacing);
+}
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing);
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: var(--spacing) 0;
+}
+article {
+    background-color: var(--card-bg-color);
+    padding: calc(var(--spacing) * 2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--card-shadow-color);
+    margin-bottom: var(--spacing);
+}
+
+/* Responsive Cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--spacing);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: var(--spacing);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+@media (min-width: 600px) {
+    .card {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .card img {
+        max-width: 50%;
+        margin-right: var(--spacing);
+    }
+
+    .card-content {
+        gap: calc(var(--spacing) / 2);
+    }
+}
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: var(--spacing);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* styling */
+video, audio {
+    width: 50%;
+    margin-top: var(--spacing);
+    border-radius: 4px;
+}
